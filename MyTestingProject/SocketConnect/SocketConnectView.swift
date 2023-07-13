@@ -64,7 +64,7 @@ extension SocketConnectView {
     }
     
     func layout() {
-        let alertLabel = UILabel.createLabel(size: 16, color: .red,text:"測試對應到的port為 :9366\n 請開啟Server 監聽9366 port 後\n再傳送訊息")
+        let alertLabel = UILabel.createLabel(size: 16, color: .red,text:"測試對應到的port為 :9366\n請開啟Server 監聽9366 port後\n再傳送訊息")
         alertLabel.lineBreakMode = .byCharWrapping
         alertLabel.numberOfLines = 0
         

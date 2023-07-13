@@ -19,7 +19,6 @@
 		0A2A14432995F83700428C02 /* BluetoothView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A14422995F83700428C02 /* BluetoothView.swift */; };
 		0A2A14452995F84900428C02 /* BluetoothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A14442995F84900428C02 /* BluetoothViewModel.swift */; };
 		0A2A14472995F86100428C02 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A14462995F86100428C02 /* Bluetooth.swift */; };
-		0A2A144929960C9200428C02 /* BluetoothModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A144829960C9200428C02 /* BluetoothModel.swift */; };
 		0A2A144B29962D5B00428C02 /* BluetoothCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A144A29962D5B00428C02 /* BluetoothCell.swift */; };
 		0A2A144D29963EF600428C02 /* BlueAddDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A144C29963EF600428C02 /* BlueAddDevice.swift */; };
 		0A33E6552A5BB6330015A444 /* ScratchMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33E6542A5BB6330015A444 /* ScratchMask.swift */; };
@@ -122,7 +121,6 @@
 		0A2A14422995F83700428C02 /* BluetoothView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothView.swift; sourceTree = "<group>"; };
 		0A2A14442995F84900428C02 /* BluetoothViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewModel.swift; sourceTree = "<group>"; };
 		0A2A14462995F86100428C02 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
-		0A2A144829960C9200428C02 /* BluetoothModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothModel.swift; sourceTree = "<group>"; };
 		0A2A144A29962D5B00428C02 /* BluetoothCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCell.swift; sourceTree = "<group>"; };
 		0A2A144C29963EF600428C02 /* BlueAddDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAddDevice.swift; sourceTree = "<group>"; };
 		0A33E6542A5BB6330015A444 /* ScratchMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchMask.swift; sourceTree = "<group>"; };
@@ -267,7 +265,6 @@
 				0A2A14422995F83700428C02 /* BluetoothView.swift */,
 				0A2A14442995F84900428C02 /* BluetoothViewModel.swift */,
 				0A2A14462995F86100428C02 /* Bluetooth.swift */,
-				0A2A144829960C9200428C02 /* BluetoothModel.swift */,
 				0A2A144A29962D5B00428C02 /* BluetoothCell.swift */,
 				0A2A144C29963EF600428C02 /* BlueAddDevice.swift */,
 				0A1F585B2999ED8D008242B5 /* BluetoothChooseService.swift */,
@@ -858,7 +855,6 @@
 				0AB1BB89299F7C7E008984C6 /* OperationView.swift in Sources */,
 				0AF9AFE62991F9330055473B /* CustomSegmentedControl.swift in Sources */,
 				0AC04DC8299E015A00CAE445 /* PhotoCell.swift in Sources */,
-				0A2A144929960C9200428C02 /* BluetoothModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

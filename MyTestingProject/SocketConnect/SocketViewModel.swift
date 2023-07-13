@@ -22,7 +22,7 @@ class SocketViewModel:ViewModelActivity {
             
             self.receiveData.removeAll()
             server.read(&self.receiveData) // 讀取 server 回傳資訊
-            print(self.receiveData)
+            print(self.receiveData.string ?? "none")
             
             Task.detached(operation: { @MainActor [weak self] in
                 guard let self = self else { return }

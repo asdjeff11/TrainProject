@@ -74,19 +74,6 @@ class ConnectStack {
         }
     }
     
-    func releaseIDServerConnect() { // 讓外部去釋放 IDServer ( 呼叫時機 更換社區時 IDServer 要斷開 再連接 重送社區ID
-        defer {
-            semphore.signal()
-        }
-        semphore.wait()
-        let port = Port.IDServer.rawValue
-        let IDservers = idleServer[UInt16(port)] ?? []
-        for IDserver in IDservers {
-            IDserver.close()
-        }
-        idleServer.removeValue(forKey: UInt16(port))
-    }
-    
     func releaseServerConnect(server:SocketConnector) { // 如果連線被關閉(socketConnector.close() ) 就會呼叫此 去斷開連接
         defer {
             semphore.signal()

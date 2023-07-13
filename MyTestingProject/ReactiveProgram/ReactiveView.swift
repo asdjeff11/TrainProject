@@ -23,46 +23,6 @@ class ReactiveView:UIViewController {
         view.layer.contents = Theme.backGroundImage
         setUp()
         layout()
-        
-        
-        let test =
-        [1,2,3,4].publisher
-            //.print()
-            .filter{ $0.isMultiple(of: 2)}
-            .map{ $0 * $0 }
-            .map{ "EventNumber=\(String($0))" }
-        
-        test
-            .sink(receiveValue: { value in
-                print(value)
-            })
-            .store(in: &self.setList)
-        
-        test
-            .sink(receiveValue: { value in
-                print(value)
-            })
-            .store(in: &self.setList)
-        
-        /*
-        [5,6,7,8].publisher
-            //.print()
-            .filter{ $0.isMultiple(of: 2)}
-            .map{ $0 * $0 }
-            .map{ "EventNumber=\(String($0))" }
-            .sink(receiveValue: { value in
-                print(value)
-            })
-            .store(in: &self.setList)
-        */
-        /*
-        [1,2,3,4].publisher
-            //.print()
-            .filter{ $0 % 2 != 0 }
-            .map{ $0 * $0 }
-            .map{ "EventNumber=\(String($0))" }
-            .receive(subscriber: anySubscriber2)
-        */
     }
     
     

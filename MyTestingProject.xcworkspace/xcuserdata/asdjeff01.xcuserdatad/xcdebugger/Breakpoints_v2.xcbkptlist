@@ -7,432 +7,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "90AF6C13-E89B-441D-A689-B18B3E5AB99B"
+            uuid = "726A8BAD-E350-4C2E-85C9-77FE34F7F730"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/TestPath/ScratchMask.swift"
+            filePath = "MyTestingProject/SocketConnect/SocketConnectView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "dismissView()"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setUp()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "93B9DF76-6457-4D92-8E9A-26010C0C03ED"
+            uuid = "755A4ACC-1751-46CD-9FEF-DFBEDDBDAE93"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/ScratchMask/ScratchMask.swift"
+            filePath = "MyTestingProject/SocketConnect/SocketConnection/SocketConnector.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "getAlphaPixelPercent(img:)"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "readLengthCompletion(d:context:b:e:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FC5677A1-EA81-49EE-A4D9-54075485D4A3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/ScratchMask/ScratchMask.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "getAlphaPixelPercent(img:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "259B984C-8C51-4933-B058-ED9DF93E728E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/RestfulAPI/ViewController/RestfulAPIViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9AA0FF5D-40FF-4BC4-8826-ADF1A937BC66"
+            uuid = "B595717E-A462-483F-B8A1-B239BB1AC9ED"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/RestfulAPI/ViewController/RestfulAPIViewController.swift"
+            filePath = "MyTestingProject/SocketConnect/SocketConnection/SocketConnector.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
+            landmarkName = "read(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6316024B-B19E-484C-BB3E-A504BD9F5BFE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/RestfulAPI/ViewController/RestfulAPIViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6316024B-B19E-484C-BB3E-A504BD9F5BFE - 7c5ecad8e2b71e60"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyTestingProject.RestfulAPIViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/RestfulAPI/ViewController/RestfulAPIViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "854">
-               </Location>
-               <Location
-                  uuid = "6316024B-B19E-484C-BB3E-A504BD9F5BFE - bfcb1525a34d4e44"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;) -&gt; () in MyTestingProject.RestfulAPIViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/RestfulAPI/ViewController/RestfulAPIViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "266">
-               </Location>
-               <Location
-                  uuid = "6316024B-B19E-484C-BB3E-A504BD9F5BFE - 762d3b84ef654f6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;__C.UIImage&gt;) -&gt; () in MyTestingProject.RestfulAPIViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/RestfulAPI/ViewController/RestfulAPIViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "58">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "42E30B6B-0447-4B10-B54A-90F9332FF8B7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/WebView/WebViewTestCommunicate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "sendMsgToJS(mes:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "42E30B6B-0447-4B10-B54A-90F9332FF8B7 - 97c34e14c20f521d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyTestingProject.WebViewTestConmmunicate.sendMsgToJS(mes: Swift.String) -&gt; ()"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/WebView/WebViewTestCommunicate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "58">
-               </Location>
-               <Location
-                  uuid = "42E30B6B-0447-4B10-B54A-90F9332FF8B7 - 319217a2365bd62"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MyTestingProject.WebViewTestConmmunicate.sendMsgToJS(mes: Swift.String) -&gt; ()"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/WebView/WebViewTestCommunicate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "97">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "135A556C-31C5-44FE-9CBD-7C48E9CDF15F"
+            uuid = "69D274B2-7175-4C88-B8E2-899F55D94FBE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/AppDelegate.swift"
+            filePath = "MyTestingProject/SocketConnect/SocketConnection/SocketConnector.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "init(_:ID:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D8549E26-9D0F-4319-9D92-5D172D1DDC7E"
+            uuid = "A1E86134-81A5-4E65-9587-904EC0CDCB91"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/GoogleMapAPI/GoogleMapTestView.swift"
+            filePath = "MyTestingProject/SocketConnect/SocketConnection/SocketConnector.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "setUpUICompenent()"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "init(_:ID:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DDAB3E41-FDFD-4848-AEF8-C1025A0DEF64"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/GoogleMapAPI/GoogleMapTestView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "setUpUICompenent()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DDAB3E41-FDFD-4848-AEF8-C1025A0DEF64 - 4193cae8229d9c0c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyTestingProject.GoogleMapTestView.setUpUICompenent() -&gt; ()"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/GoogleMapAPI/GoogleMapTestView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "579">
-               </Location>
-               <Location
-                  uuid = "DDAB3E41-FDFD-4848-AEF8-C1025A0DEF64 - 5d9ab9dbccc67d2b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in MyTestingProject.GoogleMapTestView.setUpUICompenent() -&gt; ()"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/GoogleMapAPI/GoogleMapTestView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "227">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "62D301F6-7800-4FF8-9C27-48560832E9CC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/GoogleMapAPI/GoogleMapTestView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "setUpUICompenent()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2EBCD9D6-EDB4-46E6-A609-30BC12B7FE4D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CC03C7E5-5086-4721-A90A-8C6C55B5960A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/GoogleMapAPI/GoogleMapDetail/GoogleMapAddView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "setCompoment()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "623B1AE1-9814-4B2A-8F84-E7FB2BC4493E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/GoogleMapAPI/GoogleMapDetail/GoogleMapAddView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "setCompoment()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F8C6A7E0-9F09-4E72-B325-29954AA5F226"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/GoogleMapAPI/GoogleMapTestView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "setUpUICompenent()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F8C6A7E0-9F09-4E72-B325-29954AA5F226 - 4193cae8229d9c0c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyTestingProject.GoogleMapTestView.setUpUICompenent() -&gt; ()"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/GoogleMapAPI/GoogleMapTestView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "579">
-               </Location>
-               <Location
-                  uuid = "F8C6A7E0-9F09-4E72-B325-29954AA5F226 - 5d9ab9dbccc67d2b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in MyTestingProject.GoogleMapTestView.setUpUICompenent() -&gt; ()"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/GoogleMapAPI/GoogleMapTestView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "227">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "922D26EA-0E35-494F-86BB-90F597A9CF57"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTestingProject/TestGrammar/TestGrammar.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "922D26EA-0E35-494F-86BB-90F597A9CF57 - 64639a4e6c3f3abc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyTestingProject.Wallet.__allocating_init() -&gt; MyTestingProject.Wallet"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/TestGrammar/TestGrammar.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "922D26EA-0E35-494F-86BB-90F597A9CF57 - d0a285eadc28b9b0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyTestingProject.Wallet.init() -&gt; MyTestingProject.Wallet"
-                  moduleName = "MyTestingProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/TestGrammar/TestGrammar.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

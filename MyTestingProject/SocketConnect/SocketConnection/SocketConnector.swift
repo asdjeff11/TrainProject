@@ -15,7 +15,6 @@ class SocketConnector {
 //    private static let host = NWEndpoint.Host("192.168.1.86")
 //    private static let host = NWEndpoint.Host("192.168.1.3")
 
-
     private var dq = DispatchQueue(label: "Server", qos: DispatchQoS.background) // 背景執行
     private var connection: NWConnection! // 連接器
     private var ds:DispatchSemaphore? = DispatchSemaphore(value: 0) // 等待資料回傳 使用
@@ -27,9 +26,6 @@ class SocketConnector {
     private var data: Data? // 接收到的資料
     private var err: NWError? // 是否連線錯誤
     
-    private var ctl: DispatchWorkItem? // 好像用不到
-    static var onBackGround:Bool = false // 以前的使用 判斷是否在背景執行當中  (( 現在會與系統借用 30 秒 去撈取  如果30秒撈不完 且使用者還未回來app  讓app閃退好像也沒太大問題 ))
-    static var alertMsg:Bool = false // 以前的使用  判斷是否已經有錯誤資訊顯示
 
     private init(_ port: NWEndpoint.Port,ID:Int) {
         myPort = port
@@ -43,7 +39,35 @@ class SocketConnector {
         connection = NWConnection(host: SocketConnector.host, port: port, using: NWParameters(tls: nil,tcp:tcpOptions) )
         
         //connection = NWConnection(host: SocketConnector.host, port: port, using: createTLSParameters(allowInsecure: true, queue: dq))
-        connection.stateUpdateHandler = stateDidChanged(to:)
+        connection.stateUpdateHandler = { [weak self]  (state:NWConnection.State) in
+            switch state {
+            case .preparing:
+                print("connection is preparing...")
+                break
+            case .setup:
+                print("connection is about to setup")
+                break
+            case .ready:
+                print("connection is ready")
+                break
+            case .cancelled:
+                print("connection is cancelled")
+                self?.close()
+                break
+            case .waiting(let error) :
+                print("Waiting for connection error, ", error)
+                self?.close()
+                self?.ds?.signal()
+                break
+            case .failed(let error): // 心跳包的 timeout 好像會來這邊執行
+                print("Connection failed, ", error)
+                self?.ds?.signal()
+                self?.close()
+                break
+            default:
+                print("Error Occured")
+            }
+        }
         connection.start(queue: dq)
     }
     
@@ -52,7 +76,24 @@ class SocketConnector {
         let options = NWProtocolTLS.Options()
         sec_protocol_options_set_verify_block(options.securityProtocolOptions, { (sec_protocol_metadata, sec_trust, sec_protocol_verify_complete) in
             let trust = sec_trust_copy_ref(sec_trust).takeRetainedValue()
-            if let url = Bundle.main.url(forResource: "localhost", withExtension: "der"),
+            // maybe you have to download the SSL certificate and save it for using in the future.
+            // This way have to check out the certificate is vaild .
+            // I'm used local.crt to showing how this work.
+            
+            // We need to translate certificate to data
+            // If you get others cetificate file extension (PEM), you have to turn it to string .
+            // And you can get some data like :
+            // -----Begin CERTIFICATE-----
+            // ...
+            // -----END CERTIFICATE-----
+            //
+            // just get the middle data and translate data .  (ex : Data(base64Encoded: middleData, options: .ignoreUnknownCharacters)
+            //
+            // Then call SecCeritificateCreateWithData(nil,data as CFData)  and SecTrustSecAnchorCertificates to check out the certificate.
+            // ## Warning : If the certificate is create by yourself (not create from thrid party), you have to trust the certificate on device.
+            //              Put Certificate in your device.
+            //              device => Settings => General => About => Certificate Trust Settings.
+            if let url = Bundle.main.url(forResource: "localhost", withExtension: "crt"), // certificate file
                let data = try? Data(contentsOf: url),
                let cert = SecCertificateCreateWithData(nil, data as CFData) {
                if SecTrustSetAnchorCertificates(trust, [cert] as CFArray) != errSecSuccess {
@@ -61,8 +102,39 @@ class SocketConnector {
                }
             }
             
+            /* download certificate version
+             var cetificate = [Data]()
+            guard let url = URL(string: "https://....") else { sec_protocol_verify_complete(false) ; return }
+            
+            let group = DispatchGroup()
+            group.enter()
+            URLSession.shared.dataTask(with: url, completionHandler: { (data,response,error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+                else if let pem = data?.string {
+                    result = pem.components(separatedBy: "-----END CERTIFICATE-----").map({ $0.replacingOccurrences(of: "-----BEGIN CERTIFICATE-----", with: "").replacingOccurrences(of: "\n", with: "")}).dropLast()
+                    // save to database
+                    _ = result.map {
+                        db.update(object: SSLCertificate(certificate: $0))
+                    }
+                }
+                group.leave()
+            }).resume()
+            
+            group.wait()
+            cetificate = result.compactMap({ Data(base64Encoded: $0, options: .ignoreUnknownCharacters) })
+            let certs = certificate.compactMap({  SecCertificateCreateWithData(nil, $0 as CFData ) })
+            if certs.isEmpty { sec_protocol_verify_complete(false) ; return }
+             
+            if SecTrustSetAnchorCertificates(trust, certs as CFArray) != errSecSuccess {
+                 sec_protocol_verify_complete(false)
+                 return
+             }
+            */
+            
             // 设置验证策略
-            let policy = SecPolicyCreateSSL(true, "myserver" as CFString)
+            let policy = SecPolicyCreateSSL(true, "myserver" as CFString) // certificate name
             SecTrustSetPolicies(trust, policy)
             SecTrustSetAnchorCertificatesOnly(trust, true)
              
@@ -71,7 +143,7 @@ class SocketConnector {
             if SecTrustEvaluateWithError(trust, &error) {
                 sec_protocol_verify_complete(true)
                  
-            } else {
+            } else { // Certificate will be expired.  So you have to download SSL certificate again.  Use local certificate is for testing version.
                 sec_protocol_verify_complete(false)
                 print(error!)
             }
@@ -104,14 +176,9 @@ class SocketConnector {
     
     private func sendCompletion(e: NWError?) { // 傳送完成後 呼叫
         err = e
-        if ( err != nil || myPort == 19998 ) { // 19998 為 notification server 已經送完了
+        if ( err != nil ) {
             close()
         }
-        
-        // ds.signal()
-        /*if ( err != nil ) {
-            print(err!.localizedDescription)
-        }*/
     }
   
 
@@ -160,7 +227,7 @@ class SocketConnector {
     
     private func readLengthCompletion(d: Data?, context: NWConnection.ContentContext?, b: Bool, e: NWError?) {
         guard let _ = d else {
-            close() // 關閉連線   buffer 沒資料read ( 可能是APServer斷線了 or 錯誤被APServer斷線 沒回傳資料
+            close() // 關閉連線   buffer 沒資料read ( 可能是Server斷線了 or 錯誤被APServer斷線 沒回傳資料
             length = 0xFFFF // -2
             ds?.signal() // timeOut 會進來這邊 d = nil
             return
@@ -214,11 +281,6 @@ class SocketConnector {
             connection = nil
         }
         
-        if let ctl = ctl, ctl.isCancelled == false {
-            ctl.cancel()
-            self.ctl = nil
-        }
-        
         ConnectStack.stacks.releaseServerConnect(server: self) // 釋放
     }
 }
@@ -226,43 +288,6 @@ class SocketConnector {
 extension SocketConnector {
     public func removeData() {
         self.data = nil
-    }
-    
-    public func setTime() { // 目前先不用
-        self.lastUsedTime = Date().timeIntervalSince1970
-    }
-}
-
-
-extension SocketConnector { // 狀態判斷
-    private func stateDidChanged(to state: NWConnection.State) {
-        switch state {
-        case .preparing:
-            print("connection is preparing...")
-            break
-        case .setup:
-            print("connection is about to setup")
-            break
-        case .ready:
-            print("connection is ready")
-            break
-        case .cancelled:
-            print("connection is cancelled")
-            close()
-            break
-        case .waiting(let error) :
-            print("Waiting for connection error, ", error)
-            //alertMsg("連線被拒絕 請回報公司")
-            close()
-            break
-        case .failed(let error): // 心跳包的 timeout 好像會來這邊執行
-            print("Connection failed, ", error)
-            //alertMsg("連線失敗")
-            close()
-            break
-        default:
-            print("Error Occured")
-        }
     }
 }
 
