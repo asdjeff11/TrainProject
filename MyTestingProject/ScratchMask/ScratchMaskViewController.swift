@@ -31,7 +31,7 @@ class ScratchMaskViewController:UIViewController {
     }*/
     
     func layout() {
-        let size = ( UIDevice.current.orientation.isPortrait ) ? CGSize(width: 250, height: 300) : CGSize(width: 400, height: 100)
+        let size = ( UIDevice.current.orientation.isLandscape ) ? CGSize(width: 400, height: 200) : CGSize(width: 250, height: 300) 
         scratchCard.bounds = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         scratchCard.center = view.center
     }

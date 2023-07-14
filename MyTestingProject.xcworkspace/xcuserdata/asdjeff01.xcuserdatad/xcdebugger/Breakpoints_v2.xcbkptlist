@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "571B5B76-DAD8-4309-B69B-F2D4932BC47E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyTestingProject/MainView/MainViewController.swift"
@@ -17,6 +17,70 @@
             startingLineNumber = "217"
             endingLineNumber = "217"
             landmarkName = "buttonClick(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E13F8978-56E1-458C-AD07-4B3697B461D7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyTestingProject/MainView/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "tapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E13F8978-56E1-458C-AD07-4B3697B461D7 - 3d70ab133f887175"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTestingProject.MainViewController.tapped(__C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "MyTestingProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/MainView/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "E13F8978-56E1-458C-AD07-4B3697B461D7 - 4a96eb981c520aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CALayer) -&gt; Swift.Bool in MyTestingProject.MainViewController.tapped(__C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "MyTestingProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/asdjeff01/MyIOSProject/MyTestingProject/MyTestingProject/MainView/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01B69E3D-172F-40CC-B07F-4C6675C0E1AE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyTestingProject/ScratchMask/ScratchMaskViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "layout()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
